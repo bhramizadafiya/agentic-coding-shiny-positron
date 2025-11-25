@@ -10,7 +10,7 @@ library(fabletools)
 library(ggplot2)
 library(bslib)
 # -------------------------------------------------------------------
-# 1. Load + prepare data  (FAST + clean)
+# 1. Load + prepare data 
 # -------------------------------------------------------------------
 
 raw_wines <- read_csv("AustralianWines.csv", show_col_types = FALSE)
@@ -34,7 +34,7 @@ max_date <- as.Date(max(wines_ts$Month))
 
 
 # -------------------------------------------------------------------
-# 2. UI  (same layout as your version)
+# 2. UI
 # -------------------------------------------------------------------
 
 
@@ -44,7 +44,7 @@ ui <- page_navbar(
   title = "Australian Wine Forecasting",
   theme = bs_theme(
     version = 5,
-    bootswatch = "flatly",        # modern + lightweight theme
+    bootswatch = "flatly",       
     primary = "#5A3E85",
     secondary = "#E0E0E0",
     base_font = font_google("Inter"),
@@ -114,7 +114,7 @@ ui <- page_navbar(
 
 
 # -------------------------------------------------------------------
-# 3. SERVER  (Optimized + Minor Fixes)
+# 3. SERVER 
 # -------------------------------------------------------------------
 
 server <- function(input, output, session) {
@@ -261,3 +261,4 @@ server <- function(input, output, session) {
 # Run App
 # -------------------------------------------------------------------
 shinyApp(ui, server)
+
